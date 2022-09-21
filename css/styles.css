@@ -19,6 +19,7 @@ body {
 h1,
 h2,
 h3,
+h4,
 p {
   padding: 0;
   margin: 0;
@@ -124,6 +125,7 @@ p {
 .hero {
   background-color: var(--background-dark-color);
   text-align: center;
+  padding: 200px 0;
 }
 .hero-title {
   font-weight: 900;
@@ -157,13 +159,13 @@ p {
 /* ---------------переваги--------------- */
 
 .advantages {
-  margin-top: 94px;
   background-color: var(--background-primary-color);
 }
 .advantages-title {
 }
 .advantages-list {
   display: flex;
+  margin: 94px 0;
 }
 .advantages-item:nth-child(n + 2) {
   margin-left: 30px;
@@ -175,6 +177,7 @@ p {
   color: var(--primary-color);
 }
 .advantages-description {
+  margin-top: 10px;
   line-height: 1.71;
   color: var(--secondary-color);
 }
@@ -182,7 +185,6 @@ p {
 /* ---------------чим займаємося--------------- */
 
 .features {
-  margin-top: 94px;
   background-color: var(--background-primary-color);
 }
 .features-title {
@@ -195,7 +197,7 @@ p {
 }
 .features-list {
   display: flex;
-  margin-top: 50px;
+  margin: 50px 0 94px 0;
   justify-content: center;
 }
 .features-item:nth-child(n + 2) {
@@ -207,7 +209,6 @@ p {
 /* ---------------Наша команда--------------- */
 
 .team {
-  margin-top: 94px;
   padding-top: 94px;
   background-color: var(--background-secondary-color);
 }
@@ -227,6 +228,7 @@ p {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  text-align: center;
 }
 .team-item:nth-child(n + 2) {
   margin-left: 30px;
@@ -248,8 +250,12 @@ p {
 /* ---------------портфоліо--------------- */
 
 .button-list {
+  display: flex;
+  margin-top: 94px;
+  justify-content: center;
 }
 .button-item {
+  padding: 6px 22px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -259,6 +265,10 @@ p {
   color: var(--primary-color);
   cursor: pointer;
   background-color: var(--background-button-color);
+  border: none;
+}
+.button-list-item:nth-child(n + 2) {
+  margin-left: 8px;
 }
 .button-item:hover,
 .button-item:focus {
@@ -266,12 +276,24 @@ p {
   background-color: var(--accent);
 }
 .portfolio-list {
+  margin: -15px;
+  margin-top: 49px;
+  margin-bottom: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: greenyellow; */
 }
 .portfolio-item {
+  width: 370px;
+  margin: 15px;
+  border: solid 1px var(--border-color);
 }
+
 .portfolio-link {
+  text-align: center;
 }
 .portfolio-title {
+  margin-top: 20px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -279,6 +301,7 @@ p {
   color: var(--primary-color);
 }
 .portfolio-subtitle {
+  margin: 4px 0 5px 0;
   font-size: 16px;
   line-height: 1.88;
   color: var(--secondary-color);
