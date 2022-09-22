@@ -24,6 +24,10 @@ p {
   padding: 0;
   margin: 0;
 }
+img {
+  display: block;
+  max-width: 100%;
+}
 .link {
   text-decoration: none;
 }
@@ -31,6 +35,9 @@ p {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+.section {
+  padding: 94px 0;
 }
 :root {
   --primary-color: #212121;
@@ -165,7 +172,6 @@ p {
 }
 .advantages-list {
   display: flex;
-  margin: 94px 0;
 }
 .advantages-item:nth-child(n + 2) {
   margin-left: 30px;
@@ -197,7 +203,7 @@ p {
 }
 .features-list {
   display: flex;
-  margin: 50px 0 94px 0;
+  margin-top: 50px;
   justify-content: center;
 }
 .features-item:nth-child(n + 2) {
@@ -209,7 +215,6 @@ p {
 /* ---------------Наша команда--------------- */
 
 .team {
-  padding-top: 94px;
   background-color: var(--background-secondary-color);
 }
 .team-title {
@@ -221,7 +226,7 @@ p {
 }
 .team-list {
   display: flex;
-  margin: 50px 0 94px 0;
+  margin-top: 50px;
 }
 .team-item {
   background-color: var(--primary-light-color);
@@ -251,8 +256,8 @@ p {
 
 .button-list {
   display: flex;
-  margin-top: 94px;
   justify-content: center;
+  padding-bottom: 16px;
 }
 .button-item {
   padding: 6px 22px;
@@ -277,23 +282,24 @@ p {
 }
 .portfolio-list {
   margin: -15px;
-  margin-top: 49px;
-  margin-bottom: 64px;
+  margin-top: 34px;
   display: flex;
   flex-wrap: wrap;
-  /* background-color: greenyellow; */
 }
 .portfolio-item {
   width: 370px;
   margin: 15px;
-  border: solid 1px var(--border-color);
+  flex-basis: calc(100% / 3-15);
 }
 
 .portfolio-link {
   text-align: center;
 }
+.portfolio-item-content {
+  padding: 20px 24px;
+  border: solid 1px var(--border-color);
+}
 .portfolio-title {
-  margin-top: 20px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -301,7 +307,7 @@ p {
   color: var(--primary-color);
 }
 .portfolio-subtitle {
-  margin: 4px 0 5px 0;
+  margin-top: 4px;
   font-size: 16px;
   line-height: 1.88;
   color: var(--secondary-color);
@@ -352,3 +358,5 @@ p {
 .footer-tel:focus {
   color: var(--accent);
 }
+
+/* outline: 1px solid greenyellow; */
