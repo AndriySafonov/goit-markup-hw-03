@@ -20,6 +20,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p {
   padding: 0;
   margin: 0;
@@ -27,17 +29,30 @@ p {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
+}
+button {
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
 }
 .link {
   text-decoration: none;
+  /* color: inherit; */
 }
 .list {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
   margin: 0;
 }
 .section {
   padding: 94px 0;
+}
+.conteiner {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 :root {
   --primary-color: #212121;
@@ -56,15 +71,11 @@ img {
 /* ---------------header--------------- */
 
 .header {
-  border: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
-.conteiner {
+.header .conteiner {
   display: flex;
-  width: 1200px;
-  padding: 0 15px;
   align-items: center;
-  justify-content: center;
-  margin: 0 auto;
 }
 .header-logo {
   font-family: 'Raleway';
@@ -76,17 +87,18 @@ img {
 .logo-akcent {
   color: var(--accent-darc-color);
 }
-.site-nav {
-  margin: 32px 0;
-}
 .site-nav-list {
   display: flex;
   margin-left: 93px;
+}
+.site-nav-item {
 }
 .site-nav-item:nth-child(n + 2) {
   margin-left: 50px;
 }
 .header-link {
+  padding: 32px 0;
+  display: block;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -106,13 +118,13 @@ img {
 .auth-nav-list {
   display: flex;
   margin-left: auto;
+  gap: 50px;
 }
 .header-mail {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-color);
-  margin-right: 50px;
 }
 .header-tel {
   font-weight: 500;
@@ -145,9 +157,8 @@ img {
   margin: 0 auto;
 }
 .button {
+  margin: 0 auto;
   margin-top: 30px;
-  border-radius: 4px;
-  border: none;
   padding: 10px 32px;
   min-width: 216px;
 
@@ -158,15 +169,14 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.06em;
 
-  cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ---------------переваги--------------- */
 
 .advantages {
-  background-color: var(--background-primary-color);
 }
 .advantages-title {
 }
@@ -178,6 +188,7 @@ img {
 }
 .advantages-subtitle {
   font-weight: 700;
+  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--primary-color);
@@ -191,7 +202,7 @@ img {
 /* ---------------чим займаємося--------------- */
 
 .features {
-  background-color: var(--background-primary-color);
+  padding-top: 0;
 }
 .features-title {
   font-weight: 700;
@@ -230,23 +241,26 @@ img {
 }
 .team-item {
   background-color: var(--primary-light-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
 }
 .team-item:nth-child(n + 2) {
   margin-left: 30px;
 }
+.team-item-content {
+  padding: 30px 0;
+}
+
 .team-subtitle {
-  margin-top: 30px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   color: var(--primary-color);
 }
 .team-description {
-  margin: 10px 0 30px 0;
+  margin-top: 10px;
   font-size: 16px;
   line-height: 1.19;
   color: var(--secondary-color);
@@ -257,7 +271,6 @@ img {
 .button-list {
   display: flex;
   justify-content: center;
-  padding-bottom: 16px;
 }
 .button-item {
   padding: 6px 22px;
@@ -269,7 +282,7 @@ img {
   border-radius: 4px;
   color: var(--primary-color);
   cursor: pointer;
-  background-color: var(--background-button-color);
+  background-color: var(--background-secondary-color);
   border: none;
 }
 .button-list-item:nth-child(n + 2) {
@@ -282,7 +295,7 @@ img {
 }
 .portfolio-list {
   margin: -15px;
-  margin-top: 34px;
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -293,7 +306,6 @@ img {
 }
 
 .portfolio-link {
-  text-align: center;
 }
 .portfolio-item-content {
   padding: 20px 24px;
@@ -317,7 +329,7 @@ img {
 
 .footer {
   background-color: var(--background-dark-color);
-  padding: 60px 0 60px 215px;
+  padding: 60px 0;
 }
 .footer-logo {
   font-family: 'Raleway';
@@ -330,10 +342,10 @@ img {
   color: var(--primary-light-color);
 }
 .address {
+  margin-top: 20px;
   font-style: normal;
 }
 .footer-list {
-  margin-top: 20px;
 }
 .footer-item:nth-child(n + 2) {
   margin-top: 9px;
