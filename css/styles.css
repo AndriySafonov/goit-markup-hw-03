@@ -87,9 +87,11 @@ button {
 .logo-akcent {
   color: var(--accent-darc-color);
 }
+.site-nav {
+  margin-left: 93px;
+}
 .site-nav-list {
   display: flex;
-  margin-left: 93px;
 }
 .site-nav-item {
 }
@@ -271,6 +273,7 @@ button {
 .button-list {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 .button-item {
   padding: 6px 22px;
@@ -295,7 +298,6 @@ button {
 }
 .portfolio-list {
   margin: -15px;
-  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -310,6 +312,7 @@ button {
 .portfolio-item-content {
   padding: 20px 24px;
   border: solid 1px var(--border-color);
+  border-top: none;
 }
 .portfolio-title {
   font-weight: 700;
